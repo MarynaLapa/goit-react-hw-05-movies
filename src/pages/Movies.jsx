@@ -77,5 +77,5 @@ const Movies = () => {
 }
 
 export default Movies
-// isShowBtn={isShowBtn} в MoviesList
+
 

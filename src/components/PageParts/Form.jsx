@@ -49,16 +49,17 @@ const SearchForm = styled.form`
 const Form = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [searchParams, setSearchParams] = useSearchParams()
-
+  
   const handlerSearch = ({ target: { value } }) => {
     setSearchQuery(value)    
   }
   
   const handlerSubmit = (e) => {
     e.preventDefault()
+    
     setSearchParams({ search: searchQuery })
   }
-
+  
   useEffect(() => {
 		!searchQuery && setSearchQuery(searchParams.get('search'))
 	}, [searchParams, searchQuery])
@@ -72,6 +73,7 @@ const Form = () => {
         autoComplete="off"
         onChange={handlerSearch}
         autoFocus
+        required
         placeholder="Search movies..."
       />
       <button type="submit">

@@ -33,8 +33,8 @@ export const getReviews = async (id) => {
 //https://api.themoviedb.org/3/search/movie?api_key=fc33011482b7a30d34016cb3bfeca441&language=en-US&query=batman
 
 export const getSearchMovie = async (query, page) => {
-	console.log('query', query)
+
 	const { data }  = await api(`/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}`)
-	console.log('data', data)
+
 	return data
 }
