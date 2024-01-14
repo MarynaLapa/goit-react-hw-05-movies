@@ -15,18 +15,14 @@ const Wrap = styled.div`
 `
 const NotFoundPage = () => {
   return (
-    <main>
-      <Section>
-        <Container>
-          <Wrap>
-            <img src={image} alt="404" />
-            <PageTitle title={'Upss... 404 Not Found Page'} />
-          </Wrap>
-        </Container>
-      </Section>
-    </main>
-    
-    
+    <Section>
+      <Container>
+        <Wrap>
+          <img src={image} alt="404" />
+          <PageTitle title={'Upss... 404 Not Found Page'} />
+        </Wrap>
+      </Container>
+    </Section>    
   )
 }
 
